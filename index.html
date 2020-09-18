@@ -70,7 +70,7 @@
   <form class="setup-wizard-form"
         method="post"
         enctype="multipart/form-data"
-        autocomplete="off">
+        autocompvare="off">
 
     <div class="setup-title">
       <div class="setup-user">
@@ -180,7 +180,27 @@
   </div>
 </template>
 
-<script src="js/game.js"></script>
+<script>
+  const FIREBALL_SIZE = 22;
+  const WIZARD_WIDTH = 70;
+  const WIZARD_SPEED = 3;
 
+  var getFireballSpeed = function (isMovingLeft) {
+    return isMovingLeft ? 2 : 5;
+  }
+
+  var getWizardHeight = function () {
+    return 1.337 * WIZARD_WIDTH;
+  }
+
+  var getWizardX = function (gameFieldWidth) {
+    return (gameFieldWidth - WIZARD_WIDTH) / 2;
+  }
+
+  var getWizardY = function (gameFieldHeight) {
+    return gameFieldHeight / 3;
+  }
+</script>
+<script src="js/game.js"></script>
 </body>
 </html>

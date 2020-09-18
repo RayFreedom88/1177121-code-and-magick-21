@@ -2,14 +2,14 @@
 
 window.GameConstants = {
   Fireball: {
-    size: window.fireballSize || 24,
+    size: window.FIREBALL_SIZE || 24,
     speed: window.getFireballSpeed || function (movingLeft) {
       return movingLeft ? 2 : 5;
     }
   },
   Wizard: {
-    speed: window.wizardSpeed || 2,
-    width: window.wizardWidth || 61,
+    speed: window.WIZARD_SPEED || 2,
+    width: window.WIZARD_WIDTH || 61,
     getHeight: window.getWizardHeight || function (width) {
       return 1.377 * width;
     },
